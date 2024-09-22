@@ -2,6 +2,9 @@
 prompt:
     .asciz "$ "         @ The shell prompt $ with a trailing space
 
+command:
+    .byte 0x0
+
 .section .text
 .global _start
 
