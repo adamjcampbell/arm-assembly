@@ -1,6 +1,6 @@
 .section .data
 prompt:
-    .asciz "$"
+    .asciz "$"          @ The shell prompt $
 
 .section .text
 .global _start
