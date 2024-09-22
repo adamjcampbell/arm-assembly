@@ -1,12 +1,12 @@
 .section .data
-msg:
+prompt:
     .asciz "$"
 
 .section .text
 .global _start
 
 _start:
-    ldr r0, =msg        @ Load address of the message into r0
+    ldr r0, =prompt        @ Load address of the message into r0
     mov r1, r0          @ Set r1 to point to the message
     mov r2, #1          @ Set r2 to the length of the message
     mov r7, #4          @ System call number for sys_write
