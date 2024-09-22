@@ -1,6 +1,6 @@
 .section .data
 prompt:
-    .asciz "$"          @ The shell prompt $
+    .asciz "$ "         @ The shell prompt $
 
 .section .text
 .global _start
@@ -8,7 +8,7 @@ prompt:
 _start:
     ldr r0, =prompt     @ Load address of the message into r0
     mov r1, r0          @ Set r1 to point to the message
-    mov r2, #1          @ Set r2 to the length of the message
+    mov r2, #2          @ Set r2 to the length of the message
     mov r7, #4          @ System call number for sys_write
     mov r0, #1          @ File descriptor 1 (standard output)
     svc 0               @ Make the system call
