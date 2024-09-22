@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+arm-linux-gnueabihf-gcc -o shell shell.s -nostdlib -static
